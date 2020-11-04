@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import Box from "@material-ui/core/Box";
-import CardsRender from "../Cards/CardsRender";
+ import CardsRender from "../Cards/CardsRender";
 import axios from "../../axios-detangle";
 import "./EventsContainer.css";
 import Calender from "../Calender/Calender";
