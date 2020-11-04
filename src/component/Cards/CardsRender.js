@@ -1,5 +1,4 @@
 import React from "react";
-import "./Cards.css";
 import Box from "@material-ui/core/Box";
 import { makeStyles } from "@material-ui/styles";
 import ClearIcon from "@material-ui/icons/Clear";
@@ -18,6 +17,9 @@ const useStyles = makeStyles((theme) => ({
     margin: "20px",
     padding: "10px",
   },
+  comment: {
+    textAlign: "center" 
+  }
 }));
 
 const CardsRender = (props) => {
@@ -27,7 +29,7 @@ const CardsRender = (props) => {
   return (
     <Box className={classes.card} onClick={() => props.dateHandler(start)}>
       <ClearIcon onClick={() => props.deleteCard(id)} />
-      {!!props.card && <h3 style={{ textAlign: "center" }}>{comment}</h3>}
+      {!!props.card && <h3 className={classes.comment}>{comment}</h3>}
 
       {!!props.card && (
         <input
